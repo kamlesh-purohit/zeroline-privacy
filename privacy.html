@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Zeroline</title>
+<meta name="description" content="How Zeroline handles your information. Records stay on your device. There is no account, no analytics and no advertising.">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a1d23; background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e4e6ec; background: #0b0e15; } }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.2rem; margin: 2.25rem 0 .6rem; letter-spacing: -.01em; }
+  .updated { color: #6c7280; margin: 0 0 2rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  code { font-size: .9em; background: rgba(128,128,128,.15); padding: .1em .35em; border-radius: 4px; }
+  hr { border: 0; border-top: 1px solid rgba(128,128,128,.25); margin: 2.5rem 0; }
+  footer { color: #6c7280; font-size: .9rem; }
+  a { color: #047857; }
+  @media (prefers-color-scheme: dark) { a { color: #34d399; } .updated, footer { color: #9aa1ad; } }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — Zeroline</h1>
+<p class="updated">Last updated: 9 September 2026</p>
+
+<p>
+  Zeroline is a personal debt and money tracker for Android. This policy explains what
+  the app does with your information. The short version: <strong>your records stay on
+  your phone.</strong> There is no Zeroline account, no server that holds your data, no
+  analytics and no advertising.
+</p>
+
+<h2>1. Who runs this app</h2>
+<p>
+  Zeroline is published by Kamlesh Purohit. Contact for any question about this policy
+  or your data: <a href="mailto:kamleshtpurohit@gmail.com">kamleshtpurohit@gmail.com</a>.
+</p>
+
+<h2>2. What Zeroline stores, and where</h2>
+<p>
+  Everything you enter — debts, payments, income, subscriptions, expenses, cards you are
+  holding for other people, trips, daily reviews and your written plan — is stored in a
+  database inside the app's own private storage on your device.
+</p>
+<ul>
+  <li>There is <strong>no account</strong> and <strong>no sign-in</strong>.</li>
+  <li>In the current Android build, financial records are <strong>not uploaded</strong> by Zeroline. User-initiated exports and earlier cloud-enabled betas are described below.</li>
+  <li>Android's automatic cloud backup is <strong>switched off</strong> for this app
+      (<code>allowBackup="false"</code>), so your records are not copied to Google Drive
+      or transferred to a new device by the system.</li>
+  <li>Uninstalling the app deletes this data.</li>
+</ul>
+<p>
+  You can export a backup yourself, at any time, from Settings. That produces a plain
+  JSON file which <em>you</em> save to a location you choose. Where that file then lives,
+  and who can read it, is under your control.
+</p>
+
+<h2>3. What leaves your device</h2>
+<p>The current Android build uses the network for exchange-rate lookups and SDK diagnostics, as described below.</p>
+
+<h3>Reading a screenshot or receipt</h3>
+<p>
+  Text recognition runs entirely on your phone using a model bundled inside the
+  app. <strong>Images you select are never uploaded anywhere.</strong> Zeroline uses the
+  Android photo picker, so it has no permission to browse your gallery — it only ever
+  receives the single image you pick.
+</p>
+
+<p>Google ML Kit, the bundled text-recognition SDK, collects diagnostic and usage
+metadata such as device/app information, per-installation identifiers, feature events,
+configuration, timing and error codes. Google documents this collection at
+<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.
+This metadata is encrypted in transit. This is separate from receipt image contents,
+which Zeroline does not upload.</p>
+
+<h3>On-device guidance and earlier beta builds</h3>
+<p>Android version code 4 and later disable cloud advisor chat and API-key entry. The
+Advisor computes guidance locally. Earlier private beta builds offered optional
+Anthropic chat using a user-provided key; those requests sent financial summaries and
+chat to Anthropic under the user's Anthropic account terms. Update to the current build
+to stop using that feature.</p>
+
+<h3>Currency rates for trips</h3>
+<p>
+  If you record a trip expense in a foreign currency, Zeroline asks a public exchange-rate
+  service (<a href="https://frankfurter.dev">frankfurter.dev</a>) what that currency was
+  worth in rupees on a given date.
+</p>
+<p>
+  That request contains <strong>only a three-letter currency code and a date</strong>.
+  It does not include your amount, merchant, or trip records. Like other Internet services, the recipient can receive connection metadata such as your IP address.
+</p>
+
+<h2>4. What Zeroline does not do</h2>
+<ul>
+  <li>No Zeroline-operated analytics. Google ML Kit diagnostics and usage metadata are described above.</li>
+  <li>No advertising, and no advertising identifiers.</li>
+  <li>No advertising or marketing SDKs. The text-recognition SDK reports technical diagnostics.</li>
+  <li>We do not sell personal information. SDK technical-data collection is described above.</li>
+  <li>No location collection.</li>
+  <li>No access to your contacts, messages, call logs or files.</li>
+</ul>
+
+<h2>5. Permissions, and why</h2>
+<ul>
+  <li><strong>Internet</strong> — for exchange-rate requests and SDK diagnostics described in section 3.</li>
+  <li><strong>Notifications</strong> — to remind you before an EMI or subscription is
+      due. Reminders are generated and scheduled on your device.</li>
+  <li><strong>Run at startup</strong> — so reminders survive a restart. Alarms do not
+      survive a reboot on their own.</li>
+  <li><strong>Vibrate</strong> — for reminder notifications.</li>
+</ul>
+
+<h2>6. Children</h2>
+<p>
+  Zeroline is a personal finance tool intended for adults. It is not directed at children
+  and does not knowingly collect information from them.
+</p>
+
+<h2>7. Your control over your data</h2>
+<p>
+  Because your financial records in the current build remain on your device, you do not need to ask us for access to it
+  or deletion of it — we do not hold it. You can view and edit every record in the app,
+  export it all to a JSON file, and delete everything by uninstalling.
+</p>
+
+<h2>8. Changes</h2>
+<p>
+  If this policy changes, the date at the top will change with it, and the updated policy
+  will be published at this address.
+</p>
+
+<hr>
+<footer>
+  <p>Zeroline · Contact: <a href="mailto:kamleshtpurohit@gmail.com">kamleshtpurohit@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
